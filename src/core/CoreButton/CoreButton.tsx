@@ -13,9 +13,9 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: 'sm' | 'md' | 'lg';
   /**
-   * CustomButton contents
+   * CoreButton contents
    */
   label: string;
   /**
@@ -24,15 +24,22 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-
 /**
  * Primary UI component for user interaction
  */
-export const CustomButton = ({
+export const CoreButton = ({
+    label,
+    primary,
+    size,
+    backgroundColor,
+    onClick
 }: ButtonProps) => {
   return (
-    <Button title={"hi"} >
-      Hi there
+    <Button
+        size={size}
+        onClick={onClick}
+    >
+        {label}
     </Button>
   );
 };

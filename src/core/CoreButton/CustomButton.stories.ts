@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CustomButton } from './CustomButton';
+import { CoreButton } from './CoreButton';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
-const meta: Meta<typeof CustomButton> = {
-  title: 'Example/CustomButton',
-  component: CustomButton,
+const meta: Meta<typeof CoreButton> = {
+  title: 'Example/CoreButton',
+  component: CoreButton,
   tags: ['autodocs'],
   argTypes: {
     backgroundColor: {
@@ -15,7 +15,7 @@ const meta: Meta<typeof CustomButton> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof CustomButton>;
+type Story = StoryObj<typeof CoreButton>;
 
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
 export const Primary: Story = {
@@ -27,20 +27,20 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    label: 'CustomButton',
+    label: 'SecondaryButton',
   },
 };
 
 export const Large: Story = {
   args: {
-    size: 'large',
-    label: 'CustomButton',
+    size: 'lg',
+    label: 'LargeButton'
   },
 };
 
 export const Small: Story = {
   args: {
-    size: 'small',
-    label: 'CustomButton',
+    size: 'sm',
+    label: 'SmallButton',
   },
 };

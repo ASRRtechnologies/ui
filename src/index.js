@@ -1,1 +1,1 @@
-export * from './core/CustomButton';
+export * from './core/CoreButton';
