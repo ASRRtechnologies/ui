@@ -4,7 +4,7 @@ import { CustomButton } from './CustomButton';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta: Meta<typeof CustomButton> = {
-  title: 'Example/Button',
+  title: 'Example/CustomButton',
   component: CustomButton,
   tags: ['autodocs'],
   argTypes: {
@@ -21,26 +21,26 @@ type Story = StoryObj<typeof CustomButton>;
 export const Primary: Story = {
   args: {
     primary: true,
-    label: 'Button',
+    label: 'CustomButton',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    label: 'CustomButton',
   },
 };
 
 export const Large: Story = {
   args: {
     size: 'large',
-    label: 'Button',
+    label: 'CustomButton',
   },
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
-    label: 'Button',
+    label: 'CustomButton',
   },
 };
