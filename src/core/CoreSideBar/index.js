@@ -1,0 +1,1 @@
+export {CoreSidebar} from './CoreSideBar';

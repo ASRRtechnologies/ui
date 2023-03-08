@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
+    "@heroicons/react": "^2.0.16",
     "@mantine/core": "^6.0.0",
     "@mantine/hooks": "^6.0.0",
     "@mantine/modals": "^6.0.0",
@@ -20,6 +21,7 @@
     "@mantine/prism": "^6.0.0",
     "@mantine/spotlight": "^6.0.0",
     "@mantine/tiptap": "^6.0.0",
+    "@tabler/icons": "^2.8.0",
     "@tabler/icons-react": "^2.8.0",
     "@tiptap/extension-link": "^2.0.0-beta.220",
     "@tiptap/react": "^2.0.0-beta.220",
@@ -52,7 +54,8 @@
     "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "storybook": "^7.0.0-beta.62"
+    "storybook": "^7.0.0-beta.62",
+    "storybook-dark-mode": "^2.1.1"
   },
   "description": "ASRR Core UI",
   "main": "src/index.js",
