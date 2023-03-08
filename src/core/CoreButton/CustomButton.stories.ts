@@ -8,7 +8,7 @@ const meta: Meta<typeof CoreButton> = {
   component: CoreButton,
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: {
+    color: {
       control: 'color',
     },
   },
@@ -20,27 +20,28 @@ type Story = StoryObj<typeof CoreButton>;
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'CustomButton',
+    variant: 'filled',
+    children: 'CustomButton',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'SecondaryButton',
+    children: 'SecondaryButton',
+    disabled: true,
   },
 };
 
 export const Large: Story = {
   args: {
     size: 'lg',
-    label: 'LargeButton'
+    children: 'LargeButton'
   },
 };
 
 export const Small: Story = {
   args: {
     size: 'sm',
-    label: 'SmallButton',
+    children: 'SmallButton',
   },
 };
