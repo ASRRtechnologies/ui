@@ -54,7 +54,7 @@ export const Primary: Story = {
 fs.mkdirSync(componentPath);
 fs.writeFileSync(path.join(componentPath, `${name}.tsx`), component);
 fs.writeFileSync(path.join(componentPath, `${name}.story.tsx`), story);
-fs.writeFileSync(path.join(componentPath, 'index.js'), attributes);
+fs.writeFileSync(path.join(componentPath, 'index.ts'), attributes);
 
 process.stdout.write(chalk.cyan`Component ${name} created\n`);
 process.exit(0);
