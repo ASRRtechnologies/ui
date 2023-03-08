@@ -1,7 +1,7 @@
 import {Meta, StoryObj} from "@storybook/react";
 import {CoreSidebar} from "./CoreSidebar";
-import {CoreLogo} from "../CoreLogo/CoreLogo";
 import Logo from "../../../public/asrr.svg"
+import {ArrowLeftIcon, HomeIcon, Squares2X2Icon} from "@heroicons/react/24/outline";
 
 const meta: Meta<typeof CoreSidebar> = {
     title: 'Example/CoreSidebar',
@@ -20,7 +20,24 @@ export const Primary: Story = {
         layout: 'fullscreen',
     },
     args: {
-        logo: <CoreLogo src={Logo}/>
+        logo: Logo,
+        routes: [
+            {
+                name: "Home",
+                path: "/",
+                icon: HomeIcon
+            },
+            {
+                name: "Dashboard",
+                path: "/dashboard",
+                icon: Squares2X2Icon
+            }
+        ],
+        logoutRoute: {
+            name: "Logout",
+            path: "/logout",
+            icon: ArrowLeftIcon
+        }
     }
 }
 

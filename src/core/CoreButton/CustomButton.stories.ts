@@ -21,7 +21,7 @@ type Story = StoryObj<typeof CoreButton>;
 export const Primary: Story = {
   args: {
     variant: 'filled',
-    children: 'CustomButton',
+    children: 'CustomButton1',
   },
 };
 

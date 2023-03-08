@@ -1,8 +1,18 @@
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
+import {Center, Overlay} from "@mantine/core";
+import Link from "next/link";
 
 export type CoreLogoProps = {
-    src: string,
+    src: string | StaticImageData
+    width: number
 }
-export const CoreLogo = (props: CoreLogoProps) => {
-    return <Image src={props.src} height={30} alt={"Logo"} priority/>
-}
+
+export const CoreLogo = ({width, src}: CoreLogoProps) => {
+    return (
+        <Center sx={{width: width, position: "relative"}}>
+            <Image src={src} width={width} alt="Company logo"/>
+            <Overlay<typeof Link> opacity={0} component={Link} href="/"/>
+        </Center>
+    );
+};
+

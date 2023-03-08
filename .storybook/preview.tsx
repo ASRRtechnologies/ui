@@ -2,7 +2,7 @@
 
 import {ColorSchemeProvider, MantineProvider} from '@mantine/core';
 // import theme object you've exported in previous step
-import { theme } from '../theme';
+import {theme} from '../theme';
 import {useDarkMode} from "storybook-dark-mode";
 
 // Create a wrapper component that will contain all your providers.
@@ -12,9 +12,9 @@ function ThemeWrapper(props: { children: React.ReactNode }) {
     const colorScheme = useDarkMode() ? 'dark' : 'light';
     return (
         <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={() => {}}>
-        <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
-            {props.children}
-        </MantineProvider>
+            <MantineProvider theme={{...theme, colorScheme}} withGlobalStyles withNormalizeCSS>
+                {props.children}
+            </MantineProvider>
         </ColorSchemeProvider>
     );
 }
