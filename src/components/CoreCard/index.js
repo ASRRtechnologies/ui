@@ -1,0 +1,1 @@
+export {CoreCard} from './CoreCard';
